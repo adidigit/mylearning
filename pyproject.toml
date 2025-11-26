@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "ai-research-assistant"
+version = "0.1.0"
+description = "A skeleton for a research assistant combining RAG pipelines, LLM inference, and dataset tools."
+authors = ["Your Name <your.email@example.com>"]
+packages = [{ include = "research_assistant", from = "src" }]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+# Add your dependencies here
+langchain = "*"
+llama-index = "*"
+pandas = "*"
+datasets = "*"
+hydra-core = "*"
+typer = { version = "*", extras = ["all"] }
+vllm = "*"
+accelerate = "*"
+pydantic = "*"
+tomli = "*"
+unidecode = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+black = "*"
+ruff = "*"
+mypy = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
