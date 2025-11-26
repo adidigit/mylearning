@@ -1,0 +1,16 @@
+[dataset]
+source = "huggingface"
+name = "squad"
+split = "train"
+
+[retrieval]
+engine = "llamaindex"
+embedding_model = "intfloat/e5-base"
+
+[inference]
+model = "mistralai/Mistral-7B-Instruct"
+batch_size = 8
+device = "cpu"
+
+[parallel]
+num_workers = 4
